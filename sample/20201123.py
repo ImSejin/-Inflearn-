@@ -1,3 +1,6 @@
+# 5. 숫자 타입을 배워보자
+# 6. 논리 타입과 비교/논리 연산자를 배워보자
+
 # Iterates a string.
 for i in 'string':
     print(i)
@@ -69,7 +72,7 @@ print(type(type(0)))
 a, b, c = map(int, '1,2,3'.split(','))
 
 # Swaps
-c, b, a, = a, b, c
+c, b, a = a, b, c
 print(a, b, c)
 
 # Finalizes variables.
