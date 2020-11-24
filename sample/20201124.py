@@ -29,3 +29,15 @@ _toll = 15
 _budget = pay_toll(_toll, _budget)
 while _budget != -1:
     _budget = pay_toll(_toll, _budget)
+
+
+# 9. continue 문과 break 문을 배워보자
+
+for i in range(0, 10):
+    if i < 5:
+        continue
+
+    if i & 1:
+        print(f'Odd: {i}')
+    else:
+        print(f'Even: {i}')
