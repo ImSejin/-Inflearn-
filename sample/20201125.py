@@ -86,3 +86,43 @@ for n in range(0, 10):
     empty_list.append(n)
 
 print('empty_list: ', empty_list)
+
+# 15. 세트를 배워보자
+
+empty_set = set()  # {}로 할당하면 dictionary로 인식됨
+print(empty_set)
+empty_set.add('red')
+empty_set.add('blue')
+empty_set.add('green')
+empty_set.add('red')
+print(empty_set)
+print('red' in empty_set)  # True
+print('black' not in empty_set)  # True
+
+# empty_set.remove('black')  # KeyError
+empty_set.discard('black')  # Safe to KeyError
+print(empty_set)
+
+element = empty_set.pop()
+empty_set.pop()
+print('pop: ', element, 'empty_set: ', empty_set)
+empty_set.clear()
+print('empty_set: ', empty_set)
+
+# set().pop()  # KeyError: 'pop from an empty set'
+
+langs1 = {'C++', 'Python', 'Java', 'Python', 'Ruby', 'Javascript'}
+langs2 = {'C#', 'Java', 'Python', 'Go', 'Rust'}
+
+# 교집합
+intersection = langs1.intersection(langs2)
+# 합집합
+union = langs1.union(langs2)
+# 차집합
+difference = langs1.difference(langs2)
+# 대칭차집합, A와 B의 여집합 (합집합 - 교집합)
+complementary_set = langs1.symmetric_difference(langs2)
+print('intersection: ', intersection, intersection == langs1 & langs2)
+print('union: ', union, union == langs1 | langs2)
+print('difference: ', difference, difference == langs1 - langs2)
+print('complementary_set: ', complementary_set, complementary_set == langs1 ^ langs2 == union - intersection)
