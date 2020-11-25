@@ -8,6 +8,19 @@ if 1 == 1:
     """
 print(string)
 
+
+def func():
+    if 1 == 1:
+        string2 = """
+            2 Use of double quotation in multiline string is 
+            one of python conventions. 
+        """
+    print(string2)
+
+
+func()
+# print(string2)  # Error
+
 # Embedded variables
 print(__file__, __doc__, __name__, __package__)
 
